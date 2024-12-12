@@ -3,10 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/home_screen.dart';
 
-class AboutScreen extends StatelessWidget {
+class AboutScreen extends StatefulWidget {
   static const routeName = '/about';
   const AboutScreen({super.key});
 
+  @override
+  State<AboutScreen> createState() => _AboutScreenState();
+}
+
+class _AboutScreenState extends State<AboutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +21,7 @@ class AboutScreen extends StatelessWidget {
       body: Center(
         child: TextButton(
           onPressed: () {
-            Navigator.of(context).pushNamed(HomeScreen.routeName);
+            Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
           },
           child: Text("Home"),
         ),
