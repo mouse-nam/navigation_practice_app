@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/about_screen.dart';
 import 'package:shop_app/assignement_screen.dart';
 
+import 'app_drawer.dart';
+
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
   const HomeScreen({super.key});
@@ -34,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: Text("Home"),
       ),
@@ -103,3 +106,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+// 
